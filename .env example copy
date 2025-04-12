@@ -1,0 +1,18 @@
+---
+
+### ✅ `.env.example`
+
+```dotenv
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+DB_NAME=my_database
+
+# API Keys
+API_KEY=your_api_key_here
+
+# Other App Settings
+SECRET_KEY=your_secret_key
+APP_ENV=development

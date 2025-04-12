@@ -1,0 +1,78 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'components/terminal';
+@import 'components/cyber';
+@import 'components/japanese';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+  color: $primary-color;
+  font-family: 'Rajdhani', 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+#app {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "terminal tools"
+    "grid grid";
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.cyberpunk-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba($primary-color, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($primary-color, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hacking-tools {
+  grid-area: tools;
+  border: 1px solid $neon-pink;
+  padding: 20px;
+  background: rgba($bg-color, 0.7);
+  box-shadow: 0 0 20px rgba($neon-pink, 0.3);
+
+  h3 {
+    color: $neon-blue;
+    border-bottom: 1px solid $neon-blue;
+    padding-bottom: 10px;
+  }
+
+  input, button {
+    background: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba($neon-pink, 0.1);
+
+    &:hover {
+      background: $neon-pink;
+      color: $bg-color;
+      box-shadow: 0 0 10px $neon-pink;
+    }
+  }
+}

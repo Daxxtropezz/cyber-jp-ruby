@@ -1,0 +1,77 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore log files and temp files.
+/log/*
+!/log/.keep
+/tmp
+!/tmp/.keep
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore dotenv files (never commit secrets!)
+.env
+.env.*
+
+vendor
+Gemfile.lock
+package-lock.json
+
+# Ignore coverage reports
+/coverage/
+/coverage/assets/
+
+# Ignore node modules (if using Rails + JS)
+/node_modules/
+
+# Ignore byebug command history
+.byebug_history
+
+# Ignore Yarn files (if using Rails frontend)
+/yarn-error.log
+
+# Ignore compiled assets
+/public/assets
+/public/packs
+/public/packs-test
+/public/packs-dev
+/public/assets-dev
+
+# Ignore local databases
+*.sqlite3
+*.sqlite3-journal
+
+# Ignore system-specific files
+*.iml
+
+# Ignore test snapshot files
+/spec/examples.txt
+
+# Ignore RSpec profiling output
+/tmp/rspec_profile
+
+# Ignore Pry history
+.pry_history
+
+# Ignore Ruby version manager files
+.rvmrc
+.rbenv-version
+.ruby-version
+.ruby-gemset
+
+# Ignore compiled Ruby files
+*.rbc
+
+# Ignore gems
+/vendor/bundle
+
+# Ignore solargraph config (if using LSP)
+/.solargraph.yml

@@ -1,0 +1,45 @@
+@mixin glitch-effect($color1: $neon-pink, $color2: $neon-blue) {
+    text-shadow: 
+      2px 0 $color1,
+      -2px 0 $color2,
+      0 2px $color1,
+      0 -2px $color2;
+    animation: glitch 1s infinite alternate;
+  }
+  
+  @mixin terminal-text {
+    font-family: $font-terminal;
+    text-shadow: 0 0 5px $primary-color;
+    line-height: 1.6;
+  }
+  
+  @mixin cyber-button {
+    background: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    padding: 12px 24px;
+    font-family: $font-main;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  
+    &:hover {
+      background: $primary-color;
+      color: $bg-color;
+      box-shadow: 0 0 15px $primary-color;
+    }
+  
+    &::after {
+      content: "→";
+      position: absolute;
+      right: -20px;
+      transition: all 0.3s;
+    }
+  
+    &:hover::after {
+      right: 10px;
+    }
+  }

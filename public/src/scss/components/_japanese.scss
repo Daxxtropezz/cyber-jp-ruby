@@ -1,0 +1,45 @@
+.kanji-character {
+    position: absolute;
+    font-family: $font-japanese;
+    color: $japan-red;
+    opacity: 0.2;
+    transition: all 1s ease;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .japanese-text {
+    font-family: $font-japanese;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 5px;
+    color: $japan-white;
+    margin-left: 20px;
+  }
+  
+  .sakura {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: $neon-pink;
+    opacity: 0.7;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-45deg);
+    filter: blur(0.5px);
+    animation: fall linear infinite;
+  
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i}) {
+        left: random(100) * 1%;
+        animation-duration: random(10) + 5s;
+        animation-delay: random(5) * -1s;
+        width: random(10) + 5px;
+        height: random(10) + 5px;
+      }
+    }
+  
+    @keyframes fall {
+      0% { top: -10%; transform: rotate(-45deg) translateX(0); }
+      100% { top: 110%; transform: rotate(-45deg) translateX(random(100) - 50px); }
+    }
+  }

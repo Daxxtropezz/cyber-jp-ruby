@@ -1,0 +1,51 @@
+.terminal-container {
+    grid-area: terminal;
+    border: 1px solid $primary-color;
+    background: rgba($bg-color, 0.8);
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 30px rgba($primary-color, 0.2);
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba($primary-color, 0.2), transparent);
+      pointer-events: none;
+    }
+  
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $primary-color;
+  
+      .terminal-title {
+        @include terminal-text;
+        color: $neon-pink;
+        margin-left: 15px;
+      }
+    }
+  
+    .terminal-content {
+      @include terminal-text;
+      white-space: pre-wrap;
+  
+      .command {
+        color: $neon-blue;
+      }
+  
+      .success {
+        color: $primary-color;
+      }
+  
+      .error {
+        color: $error-color;
+      }
+    }
+  }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberJP | Futuristic Hacker Interface</title>
+  
+  <%= stylesheet_tag 'main' %>
+  <%= javascript_tag 'app' %>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cyberpunk-overlay"></div>
+  
+  <div id="app">
+    <%= erb :'partials/header' %>
+    <%= yield %>
+  </div>
+
+  <!-- Japanese sakura animation -->
+  <div class="sakura-container">
+    <% 30.times do %><div class="sakura"></div><% end %>
+  </div>
+</body>
+</html>
